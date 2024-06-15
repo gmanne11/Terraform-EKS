@@ -1,7 +1,7 @@
 resource "aws_security_group" "my-sg" {
 
   ingress {
-    description = "SSH from VPC"
+    description = "SSH from anywhere"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
