@@ -1,5 +1,9 @@
 # Super-Mario on AWS EKS with Terraform
 
+
+![super-mario-infra-flow](https://github.com/gmanne11/Terraform-EKS/assets/132149493/8c2de1ac-e7ae-45cb-9eee-fd57f6b6faff)
+
+
 ## Overview
 This project deploys the nostalgic Super Mario application on AWS Elastic Kubernetes Service (EKS) using Terraform. It automates the creation of infrastructure including VPC, subnets, NAT Gateway, EKS cluster, and more, ensuring a secure and scalable setup.
 
