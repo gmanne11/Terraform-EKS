@@ -3,8 +3,8 @@ variable "region" {
 }
 
 variable "ami" {
-    default = "ami-04b70fa74e45c3917" 
+    default = "ami-04b70fa74e45c3917" #replace it with your ami
 }
 variable "key_name" {
-    default = "testing" 
+    default = "testing" #replace it with your pem file
 }

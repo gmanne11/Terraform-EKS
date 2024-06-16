@@ -1,34 +1,23 @@
-variable "aws_region" {
-    default = "us-east-1"
-    description = "aws region"
+variable "vpc_cidr" {
+  default = "10.0.0.0/16"
 }
 
-variable "kubernetes_version" {
-    default = "1.29"
-    description = "kubernetes version"
+variable "public_subnet_cidrs" {
+  default = ["10.0.1.0/24", "10.0.2.0/24"]
 }
 
-variable "private_subnets" {
-    default = ["10.0.1.0/24", "10.0.2.0/24"]
-    description = "private subnets"
-}
-
-variable "public_subnets" {
-    default = ["10.0.4.0/24", "10.0.5.0/24"]
-    description = "public subnets"
+variable "private_subnet_cidrs" {
+  default = ["10.0.3.0/24", "10.0.4.0/24"]
 }
 
 variable "azs" {
-    default = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
-    description = "all azs"
+  default = ["us-east-1a", "us-east-1b"]
 }
 
-variable "vpc_cidr" {
-    default = "10.0.0.0/16"
-    description = "vpc cidr block"
+variable "cluster_name" {
+  default = "mario-eks-cluster"
 }
 
-variable "vpc_name" {
-    default = "vivi-eks-vpc"
-    description = "vpc name"
+variable "instance_types" {
+  default = ["t2.medium"]
 }

@@ -1,19 +1,31 @@
-output "cluster_id" {
-    value = module.eks.cluster_id
+output "vpc_id" {
+  value = aws_vpc.main-vpc.id 
 }
 
-output "cluster_end_point" {
-    value = module.eks.cluster_endpoint
+output "public_subnets" {
+  value = aws_subnet.public[*].id
 }
 
-output "cluster_security_group_id" {
-    value = module.eks.cluster_security_group_id
+output "private_subnets" {
+  value = aws_subnet.private[*].id
 }
 
-output "region" {
-    value = var.aws_region
+output "eks_cluster_name" {
+  value = aws_eks_cluster.mario-eks-cluster.name
 }
 
-output "oidc_provider_arn" {
-    value = module.eks.oidc_provider_arn
+output "eks_cluster_endpoint" {
+  value = aws_eks_cluster.mario-eks-cluster.endpoint
+}
+
+output "eks_cluster_arn" {
+  value = aws_eks_cluster.mario-eks-cluster.arn 
+}
+
+output "eks_cluster_security_group_id" {
+  value = aws_security_group.eks_cluster_sg.id
+}
+
+output "eks_node_group_name" {
+  value = aws_eks_node_group.mario-nodes.node_group_name
 }
