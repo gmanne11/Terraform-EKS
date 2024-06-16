@@ -35,3 +35,5 @@ terraform.rc
 
 # Exclude large provider binaries
 terraform-provider-aws*
+
+.terraform.*
