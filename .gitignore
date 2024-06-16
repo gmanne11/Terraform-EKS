@@ -36,4 +36,5 @@ terraform.rc
 # Exclude large provider binaries
 terraform-provider-aws*
 
-.terraform.*
+.terraform/
+.terraform.lock.hcl
